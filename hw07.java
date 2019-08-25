@@ -88,10 +88,29 @@ public class hw07 {
         System.out.println("Prime Numbers: "+ output.toString());
     }
 
+    // Prompt the user for a sentence, then invert its meaning by removing all the “negative” words and prefixes. 
+    //  Print the inverted sentence. An empty input will stop the program.
+    //  “I do not like apple. I dislike it with a passion. It is the most uninteresting fruit ever. I think it is unhealthy.” ->
+    //  “I do like apple. I like it with a passion. It is the most interesting fruit ever. I think it is healthy.”
+    static void exercise5() {
+        String input;
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Please enter a sentence: ");
+        input = reader.nextLine();
+
+        input = input.replace("un", "");
+        input = input.replace("not", "");
+        input = input.replace("dis", "");
+
+        System.out.println("The output is: " + input);
+    }
+
 
     public static void main(String[] args) {
         // hw0705();
         // hw0706();
-        homeworkExercise();
+        // homeworkExercise();
+        exercise5();
     }
 }
