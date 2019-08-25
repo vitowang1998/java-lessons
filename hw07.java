@@ -35,11 +35,11 @@ public class hw07 {
     static boolean isPrime(int n) {
         if (n == 1) {
             return false;
-        }
-
-        for (int i = 2; i < (n / 2 + 1); i++) {
-            if (n % i == 0) {
-                return false;
+        } else {
+            for (int i = 2; i < (n / 2 + 1); i++) {
+                if (n % i == 0) {
+                    return false;
+                }
             }
         }
         return true;
@@ -51,22 +51,31 @@ public class hw07 {
     // Sample in: 1 3 9 11 13
     // Sample out: 3 11 13
     static void hw0706() {
-        Vector primeNumbers = new Vector();
-        Scanner in = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);   // stdin stdout stderr
 
-        
+        String output = "";
 
+        System.out.print("Please enter a set of integers: ");
 
         while (true) {
-            int num = in.nextInt();
-            System.out.println(num);
+            int a = reader.nextInt();
+
+            if (a == 999) {
+                break;
+            }
+
+            if (isPrime(a)) {
+                output += Integer.toString(a);
+                output += " ";
+            }
         }
+
+        System.out.println("The prime numbers in the input are: " + output);
     }
 
 
     public static void main(String[] args) {
-        System.out.println("hello, world!");
-        hw0705();
+        // hw0705();
         // hw0706();
     }
 }
