@@ -73,9 +73,25 @@ public class hw07 {
         System.out.println("The prime numbers in the input are: " + output);
     }
 
+    // Create and print a string filled with prime numbers less than 1000, separated by the space character. 
+    //  Use the StringBuilder class to construct the string
+    static void homeworkExercise() {
+        StringBuilder output = new StringBuilder();
+
+        for (int i = 1; i <= 1000; i++) {
+            if (isPrime(i)) {
+                output.append(i);
+                output.append(" ");
+            }
+        }
+
+        System.out.println("Prime Numbers: "+ output.toString());
+    }
+
 
     public static void main(String[] args) {
         // hw0705();
         // hw0706();
+        homeworkExercise();
     }
 }
