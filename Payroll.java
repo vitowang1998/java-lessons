@@ -77,7 +77,7 @@ public class Payroll {
 
         public void calculateNetPay() {
             this.netPay = this.grossSalary - this.deductions;
-        }
+        } 
 
         public void printEmployeeInformation() {
             System.out.println("Employee Number: " + this.employeeNumber);
